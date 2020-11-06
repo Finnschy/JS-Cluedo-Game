@@ -1,6 +1,5 @@
 // Cluedo
-
-// Kartentypen
+// Kartentypen in Objekte
 
 let suspectsArray = [
 
@@ -100,19 +99,31 @@ let roomsArray = [
     {name: "Patio"},
 ]
 
+// erste Gehversuche
 // let randomSus2 = Math.floor(Math.random() * suspectsArray.length)
 // let weapon = Math.floor(Math.random() * weaponsArray.length)
 // let room = Math.floor(Math.random() * roomsArray.length)
 // console.log(suspectsArray[randomSus2].firstName, suspectsArray[randomSus2].lastName);
 
 
-// ------------------
+/* 
+Funktion zum Zufallswert generieren 
+math.random generiert einen zufallswert zwischen 0 und ausschließlich 1. 
+math.random wird hier aber mit der länge des per arguments übergebendem array multipliziert, dann generiert es einen zufallswert zwischen 0 und der länge des arrays.
+math.floor rundet dann auf eine ganzzahl ab. es gibt schließlich keine dezimalzahlen bei objekten.
+*/
+
 function selectRandom(someArray) {
    return Math.floor(Math.random() * someArray.length)    
 }
 
+/* 
+die funktion pickmystery erlaubt es mir, die arrays "suspectsArray", "weaponsArray" und "roomsArray" mit der selectRandom Funktion aufzurufen und ein argument zu übergeben. diese werte lasse ich in einer neuen variabel speichern.
+mit diesen variabeln kann ich dann mit den object property accessing ".keyname" die werte aus den keys ausgeben lassen, die ich sehen möchte. bei randomSus.firstName wäre das zum Beispiel der erste Name eines zufällig ausgewählten objekts innerhalb von suspectsArray. bei randomWeapon.name wäre es der name einer zufälligen waffe aus dem objekt.
+die neuen variabeln speichere ich wiederum als objekt in der variabel mystery.
+um jetzt die zufallswerte mit dem dazugehörigen string aufzurufen zu können, muss ich nur noch mystery.firstName oder mystery.name aufrufen. vor dem punkt gehört eine indexangabe in eckigen klammern um zu klären, auf welches objekt ich zugreifen möchte. bei 0 wäre es randomSus und damit könnte ich daraus die keys abgreifen. danach wird alles nur noch ins innerhtml geschrieben. bei buttondruck. juhu!
+*/
 function pickMystery() {
-    // let killerImg = document.getElementById("killerImg")
     let result = document.getElementById("result")
     let randomSus = suspectsArray[selectRandom(suspectsArray)]
     let randomWeapon = weaponsArray[selectRandom(weaponsArray)]
@@ -121,9 +132,10 @@ function pickMystery() {
     // console.log(randomWeapon.name);
     // console.log(randomRoom.name);
     let mystery = [randomSus, randomWeapon, randomRoom]
-    result.innerHTML = [`${mystery[0].firstName} ${mystery[0].lastName} killed Mr. Boddy with a ${mystery[1].name} in the ${mystery[2].name}`];
+    result.innerHTML = [`${mystery[0].firstName} ${mystery[0].lastName} killed Mr. Boddy with a ${mystery[1].name} in the ${mystery[2].name}.`];
     document.getElementById("killerImg").src = `${randomSus.img}`
 }
+
 
 
 
