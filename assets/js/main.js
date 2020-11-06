@@ -101,34 +101,30 @@ let roomsArray = [
     {name: "Patio"},
 ]
 
-// console.log(suspectsArray);
-// console.log(weaponsArray);
-// console.log(roomsArray);
+// let randomSus2 = Math.floor(Math.random() * suspectsArray.length)
+// let weapon = Math.floor(Math.random() * weaponsArray.length)
+// let room = Math.floor(Math.random() * roomsArray.length)
+// console.log(suspectsArray[randomSus2].firstName, suspectsArray[randomSus2].lastName);
 
-// Funktionen   
-// Deklariere eine Funktion namens selectRandom, um nach dem Zufallsprinzip ein Element aus einem Kartenstapel auszuwählen. Die Funktion sollte ein Array als Argument erwarten und ein zufälliges Element aus dem Array zurückgeben.
 
-// Deklariere eine Funktion namens pickMystery, die keine Argumente annimmt und ein Objekt mit drei Eigenschaften zurückgibt: Verdächtiger, Waffe und Raum, wobei jede als Wert eine Karte dieses spezifischen Typs enthält. Du kannst eine zufällige Karte jedes Typs erhalten, indem du selectRandom auf jedem Kartenstapel aufrufst.
-
-function randomNumber(randomArr) {
-    return Math.floor(Math.random() * randomArr.length)
+// ------------------
+function selectRandom(someArray) {
+   return Math.floor(Math.random() * someArray.length)    
 }
-console.log(randomNumber(suspectsArray));
-console.log(randomNumber(weaponsArray));
-console.log(randomNumber(roomsArray));
-
-let killerImg = document.getElementById("killerImg")
-let result = document.getElementById("result")
-
-function selectRandom() {
-    let randomSus = suspectsArray[randomNumber(6)]
-    let randomWp = weaponsArray[randomNumber(9)]
-    let randomRm = roomsArray[randomNumber(15)]
-}
-
-
 
 function pickMystery() {
-
+    let killerImg = document.getElementById("killerImg")
+    let result = document.getElementById("result")
+    let randomSus = suspectsArray[selectRandom(suspectsArray)]
+    let randomWeapon = weaponsArray[selectRandom(weaponsArray)]
+    let randomRoom = roomsArray[selectRandom(roomsArray)]
+    // console.log(`${randomSus.firstName} ${randomSus.lastName}`);
+    // console.log(randomWeapon.name);
+    // console.log(randomRoom.name);
+    let mystery = [`${randomSus.firstName} ${randomSus.lastName} killed Mr. Boddy with a ${randomWeapon.name} in the ${randomRoom.name}`];
+    // console.log(mystery);
+    result.innerHTML = mystery
 }
+pickMystery()
+
 
