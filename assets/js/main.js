@@ -101,17 +101,34 @@ let roomsArray = [
     {name: "Patio"},
 ]
 
+// console.log(suspectsArray);
+// console.log(weaponsArray);
+// console.log(roomsArray);
+
 // Funktionen   
 // Deklariere eine Funktion namens selectRandom, um nach dem Zufallsprinzip ein Element aus einem Kartenstapel auszuwählen. Die Funktion sollte ein Array als Argument erwarten und ein zufälliges Element aus dem Array zurückgeben.
 
 // Deklariere eine Funktion namens pickMystery, die keine Argumente annimmt und ein Objekt mit drei Eigenschaften zurückgibt: Verdächtiger, Waffe und Raum, wobei jede als Wert eine Karte dieses spezifischen Typs enthält. Du kannst eine zufällige Karte jedes Typs erhalten, indem du selectRandom auf jedem Kartenstapel aufrufst.
 
-function selectRandom(array) {
-
+function randomNumber(randomArr) {
+    return Math.floor(Math.random() * randomArr.length)
 }
+console.log(randomNumber(suspectsArray));
+console.log(randomNumber(weaponsArray));
+console.log(randomNumber(roomsArray));
+
+let killerImg = document.getElementById("killerImg")
+let result = document.getElementById("result")
+
+function selectRandom() {
+    let randomSus = suspectsArray[randomNumber(6)]
+    let randomWp = weaponsArray[randomNumber(9)]
+    let randomRm = roomsArray[randomNumber(15)]
+}
+
+
 
 function pickMystery() {
 
 }
 
-function 
