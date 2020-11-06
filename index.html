@@ -9,17 +9,28 @@
 </head>
 
 <body>
+    <div id="logo"></div>
+    <section id="flex">
 
-    <section>
-        <img id="logo" src="assets/img/cluedo_logo.png" alt="">
-        <!-- <img id="title" src="assets/img/cluedo_titel.png" alt=""> -->
-        <h1>Wer war der Mörder?</h1>
-        <div id="buttonBox">
-            <button onclick="pickMystery()">Finde es heraus</button>
-        </div>
-        <article>
+
+        <article class="imgGrid">
+            <img class="imgGallery jack" src="assets/img/cluedo_Charaktere_0000_jackMustard.png" alt="">
+            <img class="imgGallery scarlet" src="assets/img/cluedo_Charaktere_0001_kasandraScarlet.png" alt="">
+            <img class="imgGallery peacock" src="assets/img/cluedo_Charaktere_0002_eleanorPeacock.png" alt="">
+            <img class="imgGallery jacob" src="assets/img/cluedo_Charaktere_0003_jacobGreen.png" alt="">
+            <img class="imgGallery orchid" src="assets/img/cluedo_Charaktere_0004_doctorOrchid.png" alt="">
+            <img class="imgGallery plum" src="assets/img/cluedo_Charaktere_0005_victorPlum.png" alt="">
+        </article>
+
+
+        <article id="resultBox">
+            <h1>Who's the murderer?</h1>
+
+            <button onclick="pickMystery()">Can you guess?</button>
+
             <div id="killerImg"></div>
-            <p id="result">Test</p>
+            <p id="result"></p>
+            
         </article>
 
     </section>
