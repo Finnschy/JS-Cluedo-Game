@@ -112,7 +112,7 @@ function selectRandom(someArray) {
 }
 
 function pickMystery() {
-    let killerImg = document.getElementById("killerImg")
+    // let killerImg = document.getElementById("killerImg")
     let result = document.getElementById("result")
     let randomSus = suspectsArray[selectRandom(suspectsArray)]
     let randomWeapon = weaponsArray[selectRandom(weaponsArray)]
@@ -122,6 +122,7 @@ function pickMystery() {
     // console.log(randomRoom.name);
     let mystery = [randomSus, randomWeapon, randomRoom]
     result.innerHTML = [`${mystery[0].firstName} ${mystery[0].lastName} killed Mr. Boddy with a ${mystery[1].name} in the ${mystery[2].name}`];
+    document.getElementById("killerImg").src = `${randomSus.img}`
 }
 
 
