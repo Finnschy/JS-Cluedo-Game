@@ -1,0 +1,41 @@
+* {
+    font-family: monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(219, 219, 219);
+}
+
+
+#logo, #title {
+    max-width: 500px;
+    display: block;
+    margin: 2rem auto;
+}
+
+h1 {
+    text-align: center;
+    color: #660000;
+}
+
+#buttonBox {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background: #660000;
+    color: #fff;
+    border: none;
+    padding: 1.5%;
+    width: 10%;
+    margin: 2rem 0;
+}
+
+article {
+    display: flex;
+    justify-content: space-evenly;
+}
+

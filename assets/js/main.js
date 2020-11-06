@@ -72,9 +72,46 @@ let suspectsArray = [
 ]
 
 let weaponsArray = [
-
+    {name: "rope", weight: 10},
+    {name: "knife", weight: 8},
+    {name: "candlestick", weight: 2},
+    {name: "dumbbell", weight: 30},
+    {name: "poison", weight: 2},
+    {name: "axe", weight: 15},
+    {name: "bat", weight: 13},
+    {name: "trophy", weight: 25},
+    {name: "pistol", weight: 20}
 ]
 
 let roomsArray = [
-
+    {name: "Dining Room"},
+    {name: "Conservatory"},
+    {name: "Kitchen"},
+    {name: "Study"},
+    {name: "Library"},
+    {name: "Billard Room"},
+    {name: "Lounge"},
+    {name: "Ballroom"},
+    {name: "Hall"},
+    {name: "Spa"},
+    {name: "Living Room"},
+    {name: "Observatory"},
+    {name: "Theater"},
+    {name: "Guest House"},
+    {name: "Patio"},
 ]
+
+// Funktionen   
+// Deklariere eine Funktion namens selectRandom, um nach dem Zufallsprinzip ein Element aus einem Kartenstapel auszuwählen. Die Funktion sollte ein Array als Argument erwarten und ein zufälliges Element aus dem Array zurückgeben.
+
+// Deklariere eine Funktion namens pickMystery, die keine Argumente annimmt und ein Objekt mit drei Eigenschaften zurückgibt: Verdächtiger, Waffe und Raum, wobei jede als Wert eine Karte dieses spezifischen Typs enthält. Du kannst eine zufällige Karte jedes Typs erhalten, indem du selectRandom auf jedem Kartenstapel aufrufst.
+
+function selectRandom(array) {
+
+}
+
+function pickMystery() {
+
+}
+
+function 
