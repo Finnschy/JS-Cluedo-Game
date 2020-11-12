@@ -50,14 +50,11 @@
 button {
     background: #ED1C24;
     border: none;
+    border-radius: 3rem;
     margin: 2% 0;
     padding: 2.5% 5%;
     font-size: 2rem;
     transition: background .3s ease-in-out;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    -ms-transition: background .3s ease-in-out;
-    -o-transition: background .3s ease-in-out;
 }
 
 button:hover {
@@ -65,11 +62,19 @@ button:hover {
     background: #000;
 }
 
+button:focus {
+    outline: none;
+}
+
 img:hover {
     animation: shake 0.5s;
-    -webkit-animation: shake 0.5s infinite;
     opacity: .6;
 }
+
+
+.shaky {
+    animation: shake 0.5s;
+  }
 
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
